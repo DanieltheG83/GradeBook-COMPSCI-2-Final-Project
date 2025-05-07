@@ -86,6 +86,19 @@ class Student {
 
 class Gradebook {
     private:
+        vector<Student*> students; // vector of pointers to Student objects
 
     public:
-}
+        // Destructor to clean up allocated students
+        ~Gradebook() {
+            for (Student* s : students) delete s;
+        }
+
+        //Function to add new students
+        void addStudent( string name, int studentID) {
+            students.push_back(new Student(name , studentID));
+        }
+
+        
+        
+};
