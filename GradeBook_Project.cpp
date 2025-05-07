@@ -99,6 +99,28 @@ class Gradebook {
             students.push_back(new Student(name , studentID));
         }
 
-        
+        //Function to print all of students info for all students
+        void listStudents() {
+            for (Student* s: students) s->printInfo();
+        }
+
+        // save all students to a flie
+        void saveToFlie( string filename) {
+            ofstream fout(filename);            // open file to read
+            for (Student* s : students)
+                fout << s->toFileFormat() << endl;  // wrtie each student
+            fout.close(); // close file
+        }
+
+        // Load students from file
+        void loadFromFile(string filename) {
+            ifstream fin(filename);     // open file for reading
+            string line;
+            while (getline(fin, line)) {
+                Student s = Student::fromFileFormat(line);  // create from line
+                students.push_back(new Student(s));         //add copy to vector
+            }
+            fin.close();
+        }
         
 };
