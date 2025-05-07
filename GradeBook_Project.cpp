@@ -179,12 +179,49 @@ int main() {
         cin >> choice;
 
         switch(choice) {
+            case 1:
+                // add student
+                cout << "Enter First Name: ";
+                cin >> firstName;
+                cout << "Enter Last Name: ";
+                cin >> lastName;
+                fullName = firstName + " " + lastName;
 
+                cout << "Enter Student's ID: "; // add id to student
+                cin >> studentID;
+                gb.addStudent(fullName, studentID);
+
+                cout << "Enter First Grade: ";  // add first grade
+                cin >> grade;
+                gb.addGradeToStudent(studentID, grade);
+                break;
+            
+            case 2: // show list of students
+                gb.listStudents();
+                break;
+
+            case 3: // save data
+                gb.saveToFlie("gradebook.txt");
+                cout << "Saved to gradebook.txt\n";
+                break;
+
+            case 5: // Add grade to student
+                cout << "Enter Student's ID: ";
+                cin >> studentID;
+                cout << "Enter Grade to Add: ";
+                cin >> grade;
+                gb.addGradeToStudent(studentID, grade);
+                break;
+
+            case 6: // Delete Student
+                cout << "Enter Student's ID to Delete: ";
+                cin >> studentID;
+                gb.deleteStudentById(studentID);
+                break; 
+        
         }
-    }
 
+    } while (choice !=7); // repeat until user exits
 
-
-
-
-};
+    return 0;
+}
