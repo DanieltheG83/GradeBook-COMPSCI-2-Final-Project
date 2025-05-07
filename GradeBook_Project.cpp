@@ -122,5 +122,38 @@ class Gradebook {
             }
             fin.close();
         }
+
+        // Find student using ID
+        Student* findStudentById(int studentID) {
+            for (Student* s : students) {
+                if (s->getStudentID() == studentID)
+                return s;
+            }
+            return nullptr;     //null if not found
+        }
+
+        //Add grade to student from list
+        void addGradeToStudent(int studentID, float grade) {
+            Student* s = findStudentById(studentID);
+            if (s != nullptr) {
+                s->addGrade(grade);
+                cout << "Grade has been added.\n";
+            } else {
+                cout <<"Student not found.\n";
+            }
+        }
+
+        // Delete student by using ID
+        void deleteStudentById(int studentID) {
+            for (int i = 0; i < students.size(); ++i) {
+                if (students[i] -> getStudentID() == studentID) {
+                    delete students[i];
+                    students.erase(students.begin() + i);
+                    cout << "Student has been deleted.\n";
+                    return;
+                }
+            }
+            cout << "Student not found\n";
+        }
         
 };
