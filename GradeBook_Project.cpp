@@ -25,4 +25,20 @@ class Student {
         grades.push_back(grade);
     }
 
-}
+    // function calculate grades average
+    float getAverage() const {
+        if (grades.empty()) return 0;
+        float sum = 0;
+        for(float g : grades) sum += g;
+        return sum / grades.size();
+    }
+
+    // function to print student info
+    void printInfo() const {
+        cout << "Studnet: " << name << "(ID: " << studentID << ")\n";
+        cout << "Grades: ";
+        for (float g : grades) cout << g << " ";
+        cout << "\nAverage: " << getAverage() << endl;
+    }
+
+};
