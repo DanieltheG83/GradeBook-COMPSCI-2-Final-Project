@@ -51,4 +51,28 @@ class Student {
         return ss.str();
     }
 
+    //function to read student's data from line of text
+    static Student fromFileFormat(const string& line) {
+        stringstream ss(line);
+        string name;
+        getline(ss, name, ',');         // get name
+
+        int studentID;                  //read id
+        ss >> studentID;
+        ss.ignore();
+
+        Student s(name,studentID); // create student object
+        string token;
+
+        // Read and add grades until "Final Grade" is found
+        while (getline(ss, token, ',')) {
+            if(token.find("Final") != string::npos) break;
+            try {
+                float g = stof(token);  // converts string to float
+                s.addGrade(g);          // adds grade to student
+            } catch (...) {}            // ignore invalid data
+        }
+        return s;
+    }
+
 };
