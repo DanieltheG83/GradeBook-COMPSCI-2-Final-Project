@@ -75,4 +75,9 @@ class Student {
         return s;
     }
 
+    // Return student ID
+    int getStudentID() const {
+        return studentID;
+    }
+
 };
