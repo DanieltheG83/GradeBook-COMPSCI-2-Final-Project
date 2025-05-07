@@ -160,6 +160,28 @@ class Gradebook {
 
 // Main function
 int main() {
+    Gradebook gb;
+    int choice;
+    string firstName, lastName, fullName;
+    int studentID;
+    float grade;
+
+    do {
+        //Display Menu with choices
+        cout << "\n *****-- Gradebook Menu --*****\n";
+        cout << "1. Add Student\n";
+        cout << "2. List Students\n";
+        cout << "3. Save to File\n";
+        cout << "4. Load from File\n";
+        cout << "5. Add Grade to Student\n";
+        cout << "6. Delete Student\n";
+        cout << "7. Exit\n";
+        cin >> choice;
+
+        switch(choice) {
+
+        }
+    }
 
 
 
