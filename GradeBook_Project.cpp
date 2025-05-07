@@ -33,12 +33,22 @@ class Student {
         return sum / grades.size();
     }
 
-    // function to print student info
+    // function to print student's info
     void printInfo() const {
         cout << "Studnet: " << name << "(ID: " << studentID << ")\n";
         cout << "Grades: ";
         for (float g : grades) cout << g << " ";
         cout << "\nAverage: " << getAverage() << endl;
+    }
+
+    // saving student's info into file format
+    string toFileFormat() const {
+        stringstream ss;
+        ss << name << "," << studentID;
+        for (float g : grades)
+            ss << "," << g;
+        ss <<", Final Grade: " << fixed << setprecision(2) << getAverage();
+        return ss.str();
     }
 
 };
