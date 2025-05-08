@@ -180,7 +180,8 @@ int main() {
         cout << "7. Exit\n";
         cin >> choice;
 
-        if(cin.fail()) {
+        // Breaks loop if invlaid input
+        if(cin.fail()) {                    
             cin.clear();
             cin.ignore(1000, '\n');
             cout << "Invalid Input. Please Enter a Number.\n";
