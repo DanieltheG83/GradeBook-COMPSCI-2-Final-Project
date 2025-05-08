@@ -2,3 +2,4 @@ Daniel Gonzalez, Student ID: 1, Grades:,100,89, Final Grade: 94.50
 Jaqueline Calderon, Student ID: 2, Grades:,100,100, Final Grade: 100.00
 John Gonzalez, Student ID: 3, Grades:,100,79, Final Grade: 89.50
 Michael Gonzalez, Student ID: 4, Grades:,100,75, Final Grade: 87.50
+John Doe, Student ID: 6, Grades:,90,70, Final Grade: 80.00
