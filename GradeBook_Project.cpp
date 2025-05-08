@@ -57,9 +57,11 @@ class Student {
         string name;
         getline(ss, name, ',');         // get name
 
-        int studentID;                  //read id
-        ss >> studentID;
-        ss.ignore();
+        string temp;
+        getline(ss, temp, ':');     // skip Student ID
+        getline(ss, temp, ',');     // get student ID value
+
+        int studentID = stoi(temp);  // convert to int
 
         Student s(name,studentID); // create student object
         string token;
