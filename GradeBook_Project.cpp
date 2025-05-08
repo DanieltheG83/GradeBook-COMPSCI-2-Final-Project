@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// Student class
+// Student class //
 
 class Student {
 
@@ -27,10 +27,10 @@ class Student {
 
     // function calculate grades average
     float getAverage() const {
-        if (grades.empty()) return 0;
+        if (grades.empty()) return 0;  // avoid divisoin by zero
         float sum = 0;
         for(float g : grades) sum += g;
-        return sum / grades.size();
+        return sum / grades.size();  // returns average
     }
 
     // function to print student's info
@@ -44,11 +44,11 @@ class Student {
     // saving student's info into file format
     string toFileFormat() const {
         stringstream ss;
-        ss << name << "," << studentID;
+        ss << name << ", Student ID: " << studentID << ", Grades:";
         for (float g : grades)
             ss << "," << g;
         ss <<", Final Grade: " << fixed << setprecision(2) << getAverage();
-        return ss.str();
+        return ss.str(); // return format to
     }
 
     //function to read student's data from line of text
@@ -82,7 +82,7 @@ class Student {
 
 };
 
-// GradeBook Class
+// GradeBook Class //
 
 class Gradebook {
     private:
@@ -158,7 +158,7 @@ class Gradebook {
         
 };
 
-// Main function
+// Main function //
 int main() {
     Gradebook gb;
     int choice;

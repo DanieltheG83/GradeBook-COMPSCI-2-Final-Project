@@ -1,4 +1,5 @@
-Daniel Gonzalez,1,100,50, Final Grade: 75.00
-Jackie Calderon,2,100,99, Final Grade: 99.50
-Michael Gonzalez,4,100,80, Final Grade: 90.00
-Bob Smith,5,90,80, Final Grade: 85.00
+Daniel Gonzalez, Student ID: 1, Grades:,100,89, Final Grade: 94.50
+Jaqueline Calderon, Student ID: 2, Grades:,100,100, Final Grade: 100.00
+John Gonzalez, Student ID: 3, Grades:,100,79, Final Grade: 89.50
+Michael Gonzalez, Student ID: 4, Grades:,100,75, Final Grade: 87.50
+Bob Smith, Student ID: 5, Grades:,90,80, Final Grade: 85.00
