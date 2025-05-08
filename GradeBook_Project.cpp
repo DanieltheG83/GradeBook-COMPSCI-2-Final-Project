@@ -218,6 +218,11 @@ int main() {
                 cout << "Saved to gradebook.txt\n";
                 break;
 
+            case 4: // load data
+                gb.loadFromFile("gradebook.txt");
+                cout << "Loaded from gradebook.txt\n";
+                break;
+
             case 5: // Add grade to student
                 cout << "Enter Student's ID: ";
                 cin >> studentID;
