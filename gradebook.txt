@@ -1,4 +1,3 @@
 Daniel Gonzalez,1,100,50, Final Grade: 75.00
 Jackie Calderon,2,100,99, Final Grade: 99.50
-John Gonzalez,3,100,70, Final Grade: 85.00
 Michael Gonzalez,4,100,80, Final Grade: 90.00
