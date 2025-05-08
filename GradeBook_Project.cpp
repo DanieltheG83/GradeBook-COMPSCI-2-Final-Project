@@ -178,6 +178,13 @@ int main() {
         cout << "7. Exit\n";
         cin >> choice;
 
+        if(cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid Input. Please Enter a Number.\n";
+            continue;
+        }
+
         switch(choice) {
             case 1:
                 // add student
@@ -193,6 +200,12 @@ int main() {
 
                 cout << "Enter First Grade: ";  // add first grade
                 cin >> grade;
+                while (cin.fail()) {
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cout << "Invalid Grade. Please Enter a Number: ";
+                    cin >> grade;
+                }
                 gb.addGradeToStudent(studentID, grade);
                 break;
             
