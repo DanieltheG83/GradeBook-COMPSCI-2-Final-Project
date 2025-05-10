@@ -18,7 +18,7 @@ This is a simple C++ program for managing student records. This programs allows 
 Full Name, StudentID, Grade1, Grade2,... Final Grade: AverageGrade
 
 ## Example 
-Daniel Gonzalez,1,100,50, Final Grade: 75.00
+Daniel Gonzalez, Student ID: 1, Grades:,100,89, Final Grade: 94.50
 
 ## How to Compile
 Use a C++ compiler
